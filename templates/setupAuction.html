@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Setup Auction</title>
+
+    <style>
+        div {
+          margin-bottom: 10px;
+        }
+        label {
+          display: inline-block;
+          width: 150px;
+          text-align: right;
+        }
+
+        <!---->
+
+        #feedback-form {
+            width: 350px;
+            margin: 0 auto;
+            background-color: #fcfcfc;
+            padding: 20px 50px 50px;
+            box-shadow: 1px 4px 10px 1px #aaa;
+            font-family: sans-serif;
+          }
+          
+          
+        
+    </style>
+    
+
+</head>
+<body>
+
+
+    <div id="feedback-form">
+    <h2 class="header">Comp description form</h2>
+    <div>
+    <form action="/inputAgents" method="GET">
+
+        <div>
+            <label>competition_id : </label> <input name="competition_id" type="text" value="competition123"><br>
+        </div>
+
+        <div>
+            <label>title : </label>  <input name="title" type="text" value="lorem ipsum"><br>
+        </div>
+        <div>
+            <label>description : </label>  <input name="description" type="text" value="lorem ipsum"><br>
+        </div>
+        <div>
+            <label>starts : </label>   <input name="starts" type="datetime-local" id="today" step="1"><br>
+        </div>
+        <div>
+            <label> response_clock : </label>  <input name="response_clock" type="Number" value="4" placeholder="in seconds"><br>
+        </div>
+
+        <div>
+            <label>bid_clock : </label>  <input name="bid_clock" type="Number" value="40" placeholder="in seconds"><br>
+        </div>
+        <div>
+            <label>mechanism: </label>  <input name="mechanism" type="text" value="combinatorial_exchange"><br>
+        </div>
+
+        <div>
+            <label>Number of agents : </label> <input name="nbAgents" type="Number" ><br>
+        </div>
+
+        <div>
+            <label>Number of goods :</label>  <input name="nbGoods" type="Number"><br>
+        </div>
+
+
+
+        <input type="submit" Label="Go!">
+
+    </form>
+</div>
+</div>
+
+</body>
+</html>

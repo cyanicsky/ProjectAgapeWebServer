@@ -1,0 +1,19 @@
+<head>
+
+    <meta charset="UTF-8">
+    <title>Synergy display</title>
+
+</head>
+
+<body>
+    <br>
+    <br>
+<div class="container"></div>
+   <script>
+     const Good_data = JSON.parse({{json_data|tojson}});
+     console.log(Good_data);
+     document.querySelector(".container").innerHTML = JSON.stringify(Good_data, null, 2);
+   </script>
+     
+</body>
+</html>

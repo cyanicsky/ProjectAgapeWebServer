@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Define Goods</title>
+    <style>
+        div {
+          margin-bottom: 10px;
+        }
+        label {
+          display: inline-block;
+          width: 300px;
+          text-align: right;
+        }
+
+        <!---->
+
+        #feedback-form {
+            width: 350px;
+            margin: 0 auto;
+            background-color: #fcfcfc;
+            padding: 20px 50px 50px;
+            box-shadow: 1px 4px 10px 1px #aaa;
+            font-family: sans-serif;
+          }
+          
+          
+        
+    </style>
+</head>
+<body>
+    <div id="feedback-form">
+
+    <form action="/inputValues" method="get" enctype="multipart/form-data">
+        {% for m in range(1, nGoods + 1) %}
+            <p>
+        Goods {{ m }}:
+           Name : <input name="GoodName[{{ m }}]" type="text">
+
+            </p>
+       {% endfor %}
+   
+           <input type="submit" Label="Go!">
+   
+       </form>
+    </div>
+       <br> <br> 
+
+       <div class="container"></div>
+        <script>
+          const json_dat = JSON.parse({{json_dat|tojson}});
+          console.log(json_dat);
+          document.querySelector(".container").innerHTML = JSON.stringify(json_dat, null, 2);
+        </script>
+
+     
+</body>
+</html>
